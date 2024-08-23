@@ -18,8 +18,8 @@ This is a simple Discord bot that retrieves and displays all local IP addresses 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/toastedden/IPBot.git
+cd IPBot
 ```
 
 ### 2. Create a `.env` File
