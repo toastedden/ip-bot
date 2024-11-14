@@ -1,17 +1,17 @@
-# Use an official Node.js runtime as a parent image
-FROM node:18
+# Use Node.js v22 LTS with Alpine as the base image
+FROM node:22-alpine
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Copy package.json and package-lock.json (if available)
+# Copy only the package.json and package-lock.json first to leverage Docker cache
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --production
+RUN npm install
 
 # Copy the rest of the application code
 COPY . .
 
-# Define the command to run your application
-CMD ["node", "."]
+# Run npm update each time the container is started to ensure dependencies are up to date
+CMD npm install && node src/index.js

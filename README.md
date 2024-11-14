@@ -18,8 +18,8 @@ This is a simple Discord bot that retrieves and displays all local IP addresses 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/toastedden/IPBot.git
-cd IPBot
+git clone https://github.com/toastedden/ip-bot.git
+cd ip-bot
 ```
 
 ### 2. Create a `.env` File
@@ -27,6 +27,7 @@ cd IPBot
 Create a `.env` file in the root directory of the project and add the following variables:
 
 ```plaintext
+HOST_NAME=your-host-name
 TOKEN=your-discord-bot-token
 SEND_CHANNEL=your-discord-channel-id
 CLIENT_ID=your-discord-client-id
